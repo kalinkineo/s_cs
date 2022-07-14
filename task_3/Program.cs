@@ -4,7 +4,7 @@
 // 5 -> Пятница
 
 
-Console.Write("Введите порядковый номер дня недели: ");
+Console.Write(value: "Введите порядковый номер дня недели: ");
 int day = Convert.ToInt32(Console.ReadLine());
 
 if (day == 1)
