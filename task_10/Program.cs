@@ -8,11 +8,19 @@
 Console.WriteLine("Введите трехзначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-if ((99 < num) && (num < 1000)) {
-    int firstDigit = num / 100;
-    int lastDigit = num % 10;
-    Console.WriteLine($"Вторая цифра введеного числа: {(num - firstDigit*100 - lastDigit)/10}");
+if ((99 < num) && (num < 1000))
+{
+    Console.WriteLine($"Вторая цифра введеного числа: {SearchSecondDigit(num)}");
 }
-else {
+else
+{
     Console.WriteLine("Ошибка! Необходимо ввести трехзначное число!");
+}
+
+int SearchSecondDigit(int numc)
+{
+    int firstDigit = numc / 100;
+    int lastDigit = numc % 10;
+
+    return (num - firstDigit * 100 - lastDigit) / 10;
 }
