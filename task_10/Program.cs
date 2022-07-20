@@ -22,5 +22,5 @@ int SearchSecondDigit(int numc)
     int firstDigit = numc / 100;
     int lastDigit = numc % 10;
 
-    return (num - firstDigit * 100 - lastDigit) / 10;
+    return (numc - firstDigit * 100 - lastDigit) / 10;
 }
