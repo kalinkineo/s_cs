@@ -3,7 +3,7 @@
 // десятичное число в двоичное.
 // 45 -> 101101 3 -> 11 2 -> 10 
 
-Console.Clear();
+/*Console.Clear();
 
 Console.WriteLine("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
@@ -28,4 +28,13 @@ void PrintString(string result)
 }
 
 string res = Result(num);
-PrintString(res);
+PrintString(res);*/
+
+void ToBin(int n)
+{
+    if (n == 0) return;
+    ToBin(n / 2);
+    Console.Write(n % 2);
+}
+
+ToBin(44);
