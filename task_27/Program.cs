@@ -12,8 +12,8 @@ int GetSumNum(int number)
 {
     int result = 0;
     int ost = 0;
-  
-    while(number > 0)
+
+    while (number > 0)
     {
         ost = number % 10;
         result = result + ost;
