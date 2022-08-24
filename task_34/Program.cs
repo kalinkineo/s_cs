@@ -33,7 +33,7 @@ int GetCountEvenNumber(int[] tempArray)
 
 void OutputResult(int[] outpuntArray, int countEven)
 {
-    Console.Write("{");
+    Console.Write("[");
     for (int i = 0; i < outpuntArray.Length; i++)
     {
         Console.Write(outpuntArray[i]);
@@ -43,7 +43,7 @@ void OutputResult(int[] outpuntArray, int countEven)
         }
         else
         {
-            Console.Write("}");
+            Console.Write("]");
         }
     }
 
