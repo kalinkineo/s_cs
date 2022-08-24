@@ -21,7 +21,7 @@ int[] GetArray(int count)
 int GetSumOddPos(int[] array_num)
 {
     int sum = 0;
-int[] array_num2 = [-4, -6, 89, 6];
+
     for (int i = 0; i < array_num.Length; i++)
     {
         sum = sum + array_num[i];
