@@ -41,7 +41,7 @@ void PrintArray(int[] array)
     }
 }
 
-int[] array = CreateArrayRndInd(12, 0, 6);
+int[] array = CreateArrayRndInd(12, 0, 15);
 PrintArray(array);
 Console.WriteLine();
 Elem(array, num);
