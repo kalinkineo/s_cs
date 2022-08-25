@@ -1,19 +1,17 @@
 ﻿// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами.
 // Напишите программу, которая покажет количество чётных чисел в массиве.
-
 // [345, 897, 568, 234] -> 2
 
-int[] GetArray(int count)
+int[] CreateArrayRndInd(int size, int min, int max)
 {
-    int[] array = new int[count];
+    int[] arr = new int[size];
+    Random rnd = new Random();
 
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        count = new Random().Next(100, 999);
-        array[i] = count;
+        arr[i] = rnd.Next(min, max + 1);
     }
-
-    return array;
+    return arr;
 }
 
 int GetCountEvenNumber(int[] tempArray)
@@ -31,30 +29,23 @@ int GetCountEvenNumber(int[] tempArray)
     return cen;
 }
 
-void OutputResult(int[] outpuntArray, int countEven)
+void PrintArray(int[] array)
 {
-    Console.Write("[");
-    for (int i = 0; i < outpuntArray.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        Console.Write(outpuntArray[i]);
-        if (i != outpuntArray.Length - 1)
-        {
-            Console.Write(",");
-        }
-        else
-        {
-            Console.Write("]");
-        }
+        if (i == 0) Console.Write("[");
+        if (i < array.Length - 1) Console.Write(array[i] + ", ");
+        else Console.Write(array[i] + "]");
     }
-
-    Console.WriteLine($" -> {countEven}");
 }
+
 
 Console.Clear();
 
 Console.WriteLine("Введите количество элементов массива:");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int[] newArray = GetArray(num);
+int[] newArray = CreateArrayRndInd(num, 100, 999);
 int countEvenNumber = GetCountEvenNumber(newArray);
-OutputResult(newArray, countEvenNumber);
+PrintArray(newArray);
+Console.WriteLine($" -> {countEvenNumber}");
