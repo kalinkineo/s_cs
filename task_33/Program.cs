@@ -28,7 +28,7 @@ void Elem(int[] array, int search)
             return;
         }
     }
-    Console.WriteLine($"Числа {search} нет в массиве");
+    Console.WriteLine($"Число {search} нет в массиве");
 }
 
 void PrintArray(int[] array)
