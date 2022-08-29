@@ -2,7 +2,7 @@
 // (последний элемент будет на первом месте, а первый - на последнем и т.д.)
 // [1 2 3 4 5] -> [5 4 3 2 1] [6 7 3 6] -> [6 3 7 6] 
 
-void Reverse(int[] array)
+/*void Reverse(int[] array)
 {
     int size = array.Length;
     int index1 = 0;
@@ -18,7 +18,7 @@ void Reverse(int[] array)
         index2--;
     }
 }
-
+*/
 int[] CreateArrayRndInd (int size, int min, int max) 
 {
     int[] arr = new int[size];
