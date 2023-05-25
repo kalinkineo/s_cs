@@ -5,4 +5,27 @@
 //N = 5 -> "5, 4, 3, 2, 1"
 //N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-Console.WriteLine("Hello, World!");
+
+int N = AskNumber("N"); 
+Console.WriteLine($"{PrintNumber(N)}"); 
+ 
+string PrintNumber(int N) 
+{ 
+    if (N < 1)  
+    { 
+        Console.Write("Неверный ввод"); 
+        return ""; 
+    } 
+
+    if (N == 1)
+        return N.ToString(); 
+    else
+        return "" + N.ToString() + ", " + PrintNumber(--N); 
+ 
+} 
+ 
+int AskNumber(string name) 
+{ 
+    Console.Write($"Введите число {name}: "); 
+    return int.Parse(Console.ReadLine()); 
+}
